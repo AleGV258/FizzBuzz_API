@@ -13,7 +13,7 @@ describe("Unit Tests for FizzbuzzService class", () => {
         expect(fizzbuzz).toEqual({});
     });
 
-    test("FizzbuzzService Trick", () => {
+    test("FizzbuzzService Trick by Explorer", () => {
         const Explorer1 = FizzbuzzService.applyValidationInExplorer(explorer1);
         const Explorer3 = FizzbuzzService.applyValidationInExplorer(explorer3);
         const Explorer5 = FizzbuzzService.applyValidationInExplorer(explorer5);
@@ -23,7 +23,17 @@ describe("Unit Tests for FizzbuzzService class", () => {
         expect(Explorer5.trick).toBe("BUZZ");
         expect(Explorer15.trick).toBe("FIZZBUZZ");
     });
-    
+
+    test("FizzbuzzService Trick by Number", () => {
+        const number1 = FizzbuzzService.applyValidationInNumber(1);
+        const number3 = FizzbuzzService.applyValidationInNumber(3);
+        const number5 = FizzbuzzService.applyValidationInNumber(5);
+        const number15 = FizzbuzzService.applyValidationInNumber(15);
+        expect(number1).toBe(1);
+        expect(number3).toBe("FIZZ");
+        expect(number5).toBe("BUZZ");
+        expect(number15).toBe("FIZZBUZZ");
+    });
 });
 
 // npm test test/services/FizzbuzzService.test.js
