@@ -7,6 +7,11 @@ describe("Unit Tests for Reader class", () => {
         const reader = new Reader()
         expect(reader).toEqual({})
     })
+
+    test('Create Reader object', () => {
+        const reader = new Reader()
+        expect(reader).toEqual({})
+    })
 })
 
 // npm test test/utils/Reader.test.js
