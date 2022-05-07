@@ -1,6 +1,5 @@
 // GitHub: @AleGV258
 
-const { getExplorersUsernamesByMission } = require("../../lib/services/ExplorerService");
 const ExplorerService = require("../../lib/services/ExplorerService");
 
 describe("Unit Tests for ExplorerService class", () => {
@@ -68,8 +67,36 @@ describe("Unit Tests for ExplorerService class", () => {
     });
 
     test("ExplorerService Username", () => {
-        const explorersUsernamesByMission = getExplorersUsernamesByMission(explorers, "node");
+        const explorersUsernamesByMission = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
         expect(explorersUsernamesByMission).toEqual(["ajolonauta1", "ajolonauta2"]);
+    });
+
+    test("ExplorerService Stack", () => {
+        const explorersByStack = ExplorerService.getExplorerStacks(explorers, "javascript");
+        expect(explorersByStack).toEqual([
+            {
+                "name": "Woopa1",
+                "githubUsername": "ajolonauta1",
+                "score": 1,
+                "mission": "node",
+                "stacks": [
+                    "javascript",
+                    "reasonML",
+                    "elm"
+                ]
+            },
+            {
+                "name": "Woopa2",
+                "githubUsername": "ajolonauta2",
+                "score": 2,
+                "mission": "node",
+                "stacks": [
+                    "javascript",
+                    "groovy",
+                    "elm"
+                ]
+            }
+        ]);
     });
 });
 
