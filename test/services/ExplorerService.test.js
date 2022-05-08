@@ -28,11 +28,6 @@ describe("Unit Tests for ExplorerService class", () => {
         }
     ];
 
-    test("Create ExplorerService object", () => {
-        const explorer = new ExplorerService();
-        expect(explorer).toEqual({});
-    });
-
     test("ExplorerService in Node", () => {
         const explorersInNode = ExplorerService.filterByMission(explorers, "node");
         expect(explorersInNode).toEqual([

@@ -8,11 +8,6 @@ describe("Unit Tests for FizzbuzzService class", () => {
     const explorer5 = {name: "Explorer5", score: 5};
     const explorer15 = {name: "Explorer15", score: 15};
 
-    test("Create FizzbuzzService object", () => {
-        const fizzbuzz = new FizzbuzzService();
-        expect(fizzbuzz).toEqual({});
-    });
-
     test("FizzbuzzService Trick by Explorer", () => {
         const Explorer1 = FizzbuzzService.applyValidationInExplorer(explorer1);
         const Explorer3 = FizzbuzzService.applyValidationInExplorer(explorer3);
