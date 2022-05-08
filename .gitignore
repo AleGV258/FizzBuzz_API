@@ -1,9 +1,0 @@
-# Ignora la carpeta node_modules
-
-node_modules
-
-/node_modules
-
-Telegram bot.txt
-
-# **/node_modules
